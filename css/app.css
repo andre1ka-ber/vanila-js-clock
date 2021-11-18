@@ -1,0 +1,93 @@
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    overflow: hidden;
+}
+
+#clock {
+    width: 15rem;
+    height: 15rem;
+    border: 25px solid #dadada;
+    border-radius: 9999px;
+    background-color: #ebebeb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transform: rotate(270deg);
+    cursor: pointer;
+}
+
+#clock #hour {
+    width: 4rem;
+    height: .5rem;
+    background-color: #505050;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: absolute;
+    transform-origin: 0 center;
+    left: 50%;
+    bottom: 48.2%;
+}
+
+#clock #minute {
+    width: 6.5rem;
+    height: .4rem;
+    background-color: #808080;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: absolute;
+    transform-origin: 0 center;
+    left: 50%;
+    bottom: 50%;
+}
+
+#clock #second {
+    width: 6.5rem;
+    height: .2rem;
+    background-color: #8d1919;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: absolute;
+    transform-origin: 0 center;
+    left: 50%;
+    bottom: 50%;
+}
+
+#clock #center-point {
+    border: .7rem solid #343434;
+    border-radius: 9999px;
+    z-index: 9;
+}
+#digital-clock {
+    width: 105%;
+    height: 105%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color:#343434;
+    font-family: monospace;
+    font-size: 2.5rem;
+    font-weight: 500;
+    position: absolute;
+    background-color: rgba(214, 214, 214, 0.5);
+    border-radius: 9999px;
+    z-index: 99;
+    transform: rotate(90deg);
+    backdrop-filter: blur(3px);
+    animation: display-digital-clock 150ms;
+}
+
+@keyframes display-digital-clock {
+    from {
+        opacity: 0;
+    } 
+    to {
+        opacity: 1;
+    }
+}
